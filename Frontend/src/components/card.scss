@@ -1,0 +1,21 @@
+@import '../scss/typography.scss';
+
+
+
+.card_date {
+  color:$Black-60;
+  padding-left: 2rem;
+}
+
+.card_message {
+  color:$Black;
+}
+
+.card_userName {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: bold;
+  margin: 0;
+}
+
+

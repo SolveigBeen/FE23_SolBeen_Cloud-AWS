@@ -1,0 +1,17 @@
+@import '../scss/variables.scss';
+
+
+.writeBtn {
+  background-color: $Red;
+  width:4rem;
+  height:4rem;
+  position: absolute; 
+  right: 20px; 
+  bottom: 20px;
+  padding:10px;
+  background-image : url('../../public/VectorpenIcon.svg');
+  background-size: calc(100% - 20px);  
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+}
