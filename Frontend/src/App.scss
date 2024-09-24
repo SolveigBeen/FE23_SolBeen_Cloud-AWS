@@ -4,24 +4,33 @@
 
 
 #root {
-  max-width: 1280px;
-  margin: 0 ;
-  padding: 2rem;
-  box-sizing: border-box;
-
+  width: 100%;
+  height: 100%;
+  
 }
 
-body {
-  background-color: $Black;
- padding: 1rem;
- height: 100vh;
- margin: auto; 
-  display: flex;
-  justify-content: center;
+* {
+  margin: 0; // Nollställ marginaler
+  padding: 0; // Nollställ padding
+  box-sizing: border-box; // Inkludera padding och border i elementets totala bredd
+}
+
+html, body {
+  margin: 0;
+  padding:  0;
+  width: 100%;
+  height: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center; 
+  background-color:$Black;
 }
 
 
 .writeMsg {
+  display: flex;
+  flex-direction: column;
+  margin-top: 60px;
   height: 100%;
 }
 
@@ -30,40 +39,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  
 }
 
 .form__bottom {
-
-padding: 2rem;
-justify-content: center;
-align-items: center;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.card {
-  display: flex;
-  flex-direction:column;
-  align-items: flex-end;
-  margin: 0;
-  padding:2rem;
-  flex-grow: 0;
-}
-
-.card__container {
-  background-color: $White;
-  padding:1rem;
-  border-bottom: 2px solid grey;
-  width:15rem;
-  min-height: 4rem;
-}
-
-.card__bottom {
-  width: 0;
-  height: 0;
-  border-right: 4rem solid transparent;
-  border-top: 4rem solid $White;
-}
 
 .input_userName {
   margin-bottom: 1rem;
@@ -72,11 +55,19 @@ align-items: center;
 }
 
 .submitBtn {
+  @extend .btn;
   width: 100%;
   background-color: $Red;
   padding:1rem;
 }
 
+
+@media (min-width: 768px) {
+  #root {
+    max-width: 1200px;
+    margin: 0 auto; /* Centrerar root-elementet när skärmen är bredare än 768px */
+  }
+}
 
 
 

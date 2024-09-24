@@ -21,7 +21,7 @@ const { v4: uuidv4 } = require('uuid');
       TableName: 'my-messages',
       Item:{
         messageId:messageId,
-        messageText: body.text,
+        messageText: body.messageText,
         userName: body.userName,
         createdAt: createdAt
       },
