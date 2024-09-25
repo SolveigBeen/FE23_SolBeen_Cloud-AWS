@@ -2,14 +2,11 @@
 
 
 .topBtn{
- 
-  width:5rem;
-  height:5rem;
-  padding:10px;
+  width:4rem;
+  height:4rem;
   background-size: calc(100% - 20px);  
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 0.5rem;
 
   &.sorted-up {
     background-image: url('../../public/time-up.svg'); // Nyast först

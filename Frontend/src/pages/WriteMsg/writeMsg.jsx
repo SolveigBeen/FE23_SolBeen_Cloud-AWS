@@ -21,8 +21,6 @@ const WriteMsg = () => {
       userName: userName,
     };
 
-  
-
     try {
       // Skicka en POST-förfrågan till din AWS API Gateway
       const response = await fetch(
@@ -56,10 +54,12 @@ const WriteMsg = () => {
 
   return (
     <div className="writeMsg" >
+      <div className="header">
        <CancelBtn onClick={handleClick}></CancelBtn>
+      </div>
       <form className="form_container" onSubmit={handleSubmit}>
         <div className="card">
-          <input
+          <textarea
             type="text"
             placeholder="Skriv ditt meddelande här..."
             className="card__container"
@@ -71,7 +71,6 @@ const WriteMsg = () => {
     
         <div className="form__bottom">
           <input
-            type="text"
             placeholder="Ditt namn"
             className="input_userName"
             value={userName} // Koppla inputfältet till state

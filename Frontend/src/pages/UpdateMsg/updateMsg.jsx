@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../../App.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
+import CancelBtn from '../../components/cancelBtn';
 
 const UpdateMsg = () => {
   const { state } = useLocation(); // Hämtar messageId, messageText och userName från state
@@ -45,15 +46,20 @@ const UpdateMsg = () => {
     }
   };
 
+  const handleClick=() => {
+    navigate('/');
+  };
+
+
   return (
     <div className="writeMsg">
-     
+     <div className="header">
+       <CancelBtn onClick={handleClick}></CancelBtn>
+      </div>
       <form className="form_container" onSubmit={handleSubmit}>
-     
+      
         <div className="card">
-          <input
-            type="text"
-          
+          <textarea
             className="card__container"
             value={message}
             onChange={(e) => setMessage(e.target.value)}

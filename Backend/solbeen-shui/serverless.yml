@@ -36,7 +36,14 @@ functions:
     events:
       - httpApi:
           path: /message/{id}
-          method: PUT        
+          method: PUT  
+
+  deleteMsg:
+    handler: functions/deleteMsg/index.handler
+    events:
+      - httpApi:
+          path: /message/{id}
+          method: DELETE 
 
 resources:
   Resources:
