@@ -13,9 +13,9 @@ exports.handler = async (event) => {
     });
 
     // Returnera ett meddelande oavsett om meddelandet fanns eller inte
-    return sendResponse({ message: 'Message deleted successfully.' });
+    return sendResponse({ message: 'Meddelandet har tagits bort' });
   } catch (error) {
-    console.error('Error deleting message:', error);
+    console.error('Fel när meddelande skulle tas bort:', error);
     return sendError(500, 'Internal Server Error');
   }
 };

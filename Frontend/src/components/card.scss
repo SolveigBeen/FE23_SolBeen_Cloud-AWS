@@ -1,7 +1,6 @@
 @import '../scss/typography.scss';
 
 
-
 .card {
   display: flex;
   flex-direction:column;
@@ -15,7 +14,6 @@
 .card__container {
   background-color: $White;
   padding:1rem;
-
   width: 100%; 
   min-height: 4rem;
   border-top-left-radius: 1rem;
@@ -32,7 +30,6 @@
   border-right: 2rem solid transparent;
   border-top: 2rem solid $White;
 }
-
 
 .card_top {
   display: flex;
@@ -52,8 +49,6 @@
   color:$Black-60;
   padding-left: 1rem;
 }
-
-
 
 .card_message {
   color:$Black;

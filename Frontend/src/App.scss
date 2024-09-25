@@ -1,7 +1,5 @@
 @import '../src/scss/variables.scss';
-@import '../src/scss/mixins';
 @import '../src/scss/typography';
-
 
 #root {
   width: 100%;
@@ -25,8 +23,8 @@ html, body {
 }
 
 .header {
-padding:0 1rem;
-margin-bottom: 2rem;
+  padding:0 1rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
   width:100%;
@@ -35,39 +33,30 @@ margin-bottom: 2rem;
   flex-shrink: 0;
 }
 
-
-.flow {
+.writeMsg , .flow , .noMsg{
   display: flex;
   flex-direction: column;
-  height: 100vh; // Gör att flödet tar upp hela höjden på skärmen
-  position: relative;
-}
-
-.writeMsg , .flow{
-  display: flex;
-  flex-direction: column;
+  height: 100vh;
 }
 
 .noMsg {
-  display: flex;
-  flex-direction: column;
  align-items: center;
  justify-content: center;
- height: 100vh;
 }
 
+//Meddelande "card" för Skriv meddelande/ Updatera meddelande
 .form_container {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
+
 .form_container >.card {
   min-height: 20rem;
- padding: 0 2rem;
+  padding: 0 2rem;
 }
 
-
+//Meddelande "card" för Flow-page
 .card_flow {
   flex-grow: 1; // Gör att denna sektion fyller tillgänglig höjd
   overflow-y: auto; // Aktivera vertikal scroll när det behövs
@@ -81,6 +70,7 @@ vertical-align: text-top;
 flex-grow: 1;
 }
 
+//Skriv meddelande och Uppdatera meddelande
 .form__bottom {
   padding: 2rem;
   display: flex;
@@ -90,7 +80,6 @@ flex-grow: 1;
   bottom: 10px;
   width:100%;
 }
-
 
 .input_userName {
   margin-bottom: 1rem;
@@ -113,11 +102,14 @@ flex-grow: 1;
 
 
 
-
 @media (min-width: 768px) {
   #root {
     max-width: 1200px;
     margin: 0 auto; /* Centrerar root-elementet när skärmen är bredare än 768px */
+  }
+
+  .form__bottom {
+    width: 70vw;
   }
 }
 

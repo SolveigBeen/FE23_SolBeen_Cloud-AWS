@@ -1,3 +1,10 @@
+//Sida som visar alla meddelanden.
+// Funktion för att sortera meddelande i tidsordning.
+// Funktion för att filtrera meddelande per userName/författare.
+// Funktion för att slänga meddelande
+// Knapp för att gå till sida för att skriva nytt meddelande.
+// Funktion för att uppdatera meddelande, genom att dirigeras till ny sida när ett meddelande klickas.
+
 import React, { useEffect, useState } from 'react';
 import Card from '../../components/card';
 import WriteBtn from '../../components/writeBtn';
@@ -21,10 +28,10 @@ const Flow = () => {
         throw new Error('Nätverks fel. Inget svar kunde erhållas.');
       }
       const data = await response.json();
-      setMessages(data.data); // Använd data.data för att uppdatera meddelanden
+      setMessages(data.data); // Uppdaterar meddelanden
       setLoading(false); // sätt laddningsstatus till false
 
-      // Kontrollera om det inte finns några meddelanden och navigera till noMsg
+      // Kontrollera ifall det inte finns några meddelanden och navigera isf till noMsg
       if (data.data.length === 0) {
         navigate('/noMessage'); // Navigera till noMsg.jsx
       }
@@ -35,6 +42,8 @@ const Flow = () => {
     }
   };
 
+
+  // Funktion för att deleta ett valt meddelande.
   const deleteMessage = async (messageId) => {
     try {
       const response = await fetch(`https://jv3o7j7xx4.execute-api.eu-north-1.amazonaws.com/message/${messageId}`, {
@@ -50,6 +59,7 @@ const Flow = () => {
     }
   };
 
+  // När meddelande klickas så dirigeras till Uppdatera-sidan. Meddelande info tas med.
   const handleEditMessage = (messageId, messageText, userName) => {
     navigate('/UpdateMsg', {
       state: { messageId, messageText, userName },
@@ -66,6 +76,7 @@ const Flow = () => {
   const handleSortMessages = () => {
     setIsSorted((prev) => !prev); // Växla sorteringsstatus
   };
+  
 
   useEffect(() => {
     fetchMessages(); // anropa fetchMessages när komponenten laddas

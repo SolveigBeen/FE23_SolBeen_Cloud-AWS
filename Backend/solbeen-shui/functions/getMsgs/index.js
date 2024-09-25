@@ -12,7 +12,7 @@ exports.handler = async (event)=> {
     });
     return sendResponse (Items);
   } catch (error){
-    console.error('Error fetching messages:', error);
+    console.error('Fel inträffat när meddelande hämtades:', error);
 
     // Returnera ett felmeddelande
     return sendError(500, { message: 'Kunde inte hämta meddelanden', error: error.message });

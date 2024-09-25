@@ -1,3 +1,8 @@
+// Meddelande kan uppdateras, text och eller userName/författare.
+// Ny info sparas till databasen vi "publicera". Navigering tillbaka till flow-översikt.
+//Möjligt att navigera tillbaka till flow-översikt utan att publicera.
+
+
 import React, { useState, useEffect } from 'react';
 import '../../App.scss';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -46,6 +51,7 @@ const UpdateMsg = () => {
     }
   };
 
+  //Navigera tillbaka till flow -översikt av meddelande.
   const handleClick=() => {
     navigate('/');
   };

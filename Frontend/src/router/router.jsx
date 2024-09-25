@@ -17,13 +17,10 @@ const router = createBrowserRouter([
     path: "/updateMsg",
     element: <UpdateMsg />,
   },
-
   {
     path: "/noMessage",
     element: <NoMsg />,
   },
-
-  
 ]);
 
 export default router;

@@ -1,18 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 @import '../src/scss/variables.scss';
 
-
 body {
   font-family: PT Sans, sans-serif;
   color: $Black;
   line-height: 150%;
-}
-
-h1 { color:#F56B9A; 
-  font-family: PT Sans;
-  font-weight: 800;
-  font-style: italic;
-  font-size:2rem;
 }
 
 h2 {
@@ -26,10 +18,9 @@ h2 {
 }
 
 h3 {
-   font-size: 2rem;
+  font-size: 2rem;
   margin:0;
 }
-
 
 p {
   font-family: PT Sans;
@@ -38,18 +29,17 @@ p {
   margin:0;
   }
  
- 
-  .font-small {
-    font-size: 0.8rem;
-    margin: 0;
-  }
+.font-small {
+  font-size: 0.8rem;
+  margin: 0;
+}
 
-  .btn {
-    font-family: PT Sans;
-    color: $Black;
-    line-height: 150%;
-    font-weight: 800;
-    font-size: 1.2rem;
-  }
+.btn {
+  font-family: PT Sans;
+  color: $Black;
+  line-height: 150%;
+  font-weight: 800;
+  font-size: 1.2rem;
+}
 
  

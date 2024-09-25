@@ -12,7 +12,7 @@ exports.handler = async (event) => {
 
      // Validate messageId
     if (!messageId || messageId.trim() === '') {
-      return sendError(400, { message: 'Message Id är felaktigt eller saknas.' });
+      return sendError(400, { message: 'MessageId är felaktigt eller saknas.' });
     }
 
     // Parse request body

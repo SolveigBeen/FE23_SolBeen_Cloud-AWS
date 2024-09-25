@@ -1,3 +1,7 @@
+//Skriva ett meddelande.
+// Ny info sparas till databasen vi "publicera". Navigering tillbaka till flow-översikt.
+//Möjligt att navigera tillbaka till flow-översikt utan att publicera.
+
 import React, { useState } from 'react';
 import '../../App.scss';
 import { useNavigate } from 'react-router-dom';
@@ -5,7 +9,6 @@ import CancelBtn from '../../components/cancelBtn';
 
 
 const WriteMsg = () => {
-
   const navigate = useNavigate();
   // State för att lagra meddelandet och användarnamnet
   const [message, setMessage] = useState('');
